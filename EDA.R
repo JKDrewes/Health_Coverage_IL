@@ -40,4 +40,4 @@ ggplot(df_cont, aes(x=as.factor(HICOV), y=WKHP)) +
 
 summary(df_cont)
 
-#It looks like the most important variable here is age, leaving others to be hardly impactful at all.
+#It looks like the most important variable here is age, leaving others to be hardly impactful at all.#

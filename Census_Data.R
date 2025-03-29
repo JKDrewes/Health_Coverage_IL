@@ -1,4 +1,3 @@
-library(tidycensus)
 library(tidyverse)
 library(data.table)
 library(srvyr)
@@ -85,7 +84,7 @@ adult_il_data = adult_il_data[-eda_ind, ]
 adult_il_sample = adult_il_data %>%
   na.omit(adult_il_data) %>%
   sample_n(500) %>%
-  mutate(across(where(is.character), factor))
+  mutate(across(where(is.character), factor)) #Doing this here to save compute
 
 #I could have avoided making some of these but did so for legibility.
 #Removing those that are unneeded before the exploration and analysis stages
@@ -93,4 +92,4 @@ rm(adult_il_data,
    person_data, 
    grouped_person_data, 
    il_acs, 
-   raw_il_data)
+   raw_il_data)#
